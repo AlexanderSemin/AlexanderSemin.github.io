@@ -1,0 +1,35 @@
+/* Styles go here */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.ball,
+a:active {
+  outline: none;
+}
+
+body {
+  font-family: 'Poiret One', cursive;
+}
+
+.ball {
+  background-color: transparent;
+  border: none;
+  margin: 50px auto;
+  width: 80px;
+  height: 80px;
+
+  display: block;
+}
+
+p {
+  font-size: 26px;
+  line-height: 1.5;
+  text-align: center;
+}
+.ball img {
+  width: 80px;
+  height: 80px;
+}
