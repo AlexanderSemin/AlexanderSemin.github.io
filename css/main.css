@@ -1,0 +1,52 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+body{
+  background-color: #eee;
+
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px;
+}
+#in {
+  padding: 14px;
+  max-width: 284px;
+  min-width: 500px;
+  display: block;
+  margin: 2px;
+
+}
+
+
+#out {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#out li input[type=text]{
+  border: none;
+  background-color: transparent;
+  padding: 0 10px;
+}
+
+input[type=checkbox]:checked + input[type=text]{
+  text-decoration:line-through;
+}
