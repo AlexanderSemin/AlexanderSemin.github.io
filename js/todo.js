@@ -45,8 +45,12 @@ window.onload = function () {
       var singleTask     = {}; // создаем обьект одной таски
       var taskListLenght = taskList.length; // узнаем длину списка задач
 
+      var now = new Date();
+      alert( now );
+
       singleTask.todo   = inputValue;
       singleTask.status = false;  // устанавливаем значение по умолчанию "не выполнено"
+      singleTask.addDate = now;
 
       taskList[taskListLenght] = singleTask;
 
@@ -84,13 +88,19 @@ window.onload = function () {
       // создаем порядковый номер для каждого таска
       var currentIndex = 'data-index="' + key + '"';
 
-      outTasks += "<li " + currentIndex + ">";
+
+
+      outTasks += "<li " + currentIndex + " draggable='true'>";
+
+
+      //outTasks += taskList[key].todo;
+      outTasks += "<input type='text' value='"+ taskList[key].todo +"'>";
+
       outTasks += taskList[key].status == true
          ? '<input type="checkbox" class="che" checked>'
          : '<input type="checkbox" class="che" >';
 
-      //outTasks += taskList[key].todo;
-      outTasks += "<input type='text' value='"+ taskList[key].todo +"'>";
+
       outTasks += "<span class='remove'" + currentIndex + ">х</span>"
       outTasks += "</li>";
 
